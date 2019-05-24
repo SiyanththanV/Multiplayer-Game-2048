@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>2048</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">2048</h1>
+            <div class="scores-container">
+                <div class="score-container">0</div>
+                <div class="best-container">0</div>
+            </div>
+        </div>
+        <div class="above-game">
+            <p class="game-intro">Combine the tiles!</p>
+            <a class="restart-button">New Game</a>
+        </div>
+
+        <div class="message-container waiting-message" style="display: none;">
+            Waiting for player 2...
+        </div>
+
+        <div class="message-container countdown-message" style="display: none;">
+            Game starting in <span class="countdown-number"></span>....
+        </div>
+
+            <div id="player-one">
+                <div class="game-container">
+                    <div class="game-message">
+                        <p></p>
+                        <div class="lower">
+                            <a class="keep-playing-button">Keep going</a>
+                            <a class="retry-button">Try again</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                    </div>
+                    <div class="tile-container">
+                    </div>
+                </div>
+            </div>
+
+            <div id="player-two">
+                <div class="game-container">
+                    <div class="game-message">
+                        <p></p>
+                        <div class="lower">
+                            <a class="keep-playing-button">Keep going</a>
+                            <a class="retry-button">Try again</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                    </div>
+                    <div class="tile-container">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/application_manager.js"></script>
+    <script src="js/game_board.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/utils/grid.js"></script>
+    <script src="js/utils/keyboard_input_manager.js"></script>
+    <script src="js/utils/local_storage_manager.js"></script>
+    <script src="js/utils/tiles.js"></script>
+</body>
+
+</html>
